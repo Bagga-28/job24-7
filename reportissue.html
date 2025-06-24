@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JOB24/7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="hcontainer">
+      <div class="logo">JOB24/7</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="companies.html">Companies</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+      <div class="auth">
+        <button id="loginBtn">Login</button>
+        <button id="signupbtn">Register</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="report-issue">
+    <h1>Report an Issue</h1>
+    <form action="#" method="post" class="issue-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="category">Issue Category</label>
+      <select id="category" name="category" required>
+        <option value="">Select</option>
+        <option value="login">Login/Register Issue</option>
+        <option value="job">Job Posting Problem</option>
+        <option value="profile">Profile/Resume Issue</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="description">Issue Description</label>
+      <textarea id="description" name="description" placeholder="Describe the issue in detail" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+
+  <footer>
+    <div class="fcontainer">
+      <div class="footer-col">
+        <ul>
+          <li><a href="aboutus.html">About us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="credits.html">Credits</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li><a href="helpcenter.html">Help center</a></li>
+          <li><a href="reportissue.html">Report issue</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <ul>
+          <li><a href="privacypolicy.html">Privacy policy</a></li>
+          <li><a href="termandcon.html">Terms & conditions</a></li>
+          <li><a href="fraudalert.html">Fraud alert</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 JOB24/7. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
