@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width">
   <title>JOB24/7</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
   <header>
     <div class="hcontainer">
-      <div class="logo">JOB24/7</div>
+      <div class="logo"><span class="time-box">24/7</span></div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="companies.html">Companies</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="skilltest.html">Skill test</a></li>
         </ul>
       </nav>
       <div class="auth">
@@ -38,73 +39,6 @@
           </form>
         </div>
       </section>
-      <section class="featured">
-        <div class="container">
-          <h2>Featured Companies Actively Hiring</h2>
-          <div class="company-grid">
-            <div class="company-card">
-              <div class="company-logo"><img src="https://www.prideindustries.com/wp-content/uploads/2021/06/Customer-logo_Amazon-1-1024x512.png.webp" alt="company logo"></div>
-              <h3>Amazon</h3>
-              <p>120 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://cdn.pixabay.com/photo/2021/11/11/12/41/facebook-6786210_1280.png" alt="company logo"></div>
-              <h3>Facebook</h3>
-              <p>50 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png" alt="company logo"></div>
-              <h3>Apple</h3>
-              <p>80 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/65c5da9f878952603e370d03_Myntra-Logo_1.svg/800px-65c5da9f878952603e370d03_Myntra-Logo_1.svg.png" alt="company logo"></div>
-              <h3>Myntra</h3>
-              <p>160 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo-2003.png" alt="company logo"></div>
-              <h3>Lenovo</h3>
-              <p>179 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://brandlogos.net/wp-content/uploads/2025/02/chanel-logo_brandlogos.net_r9vcm.png" alt="company logo"></div>
-              <h3>Chanel</h3>
-              <p>12 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://www.bluleadz.com/hs-fs/hubfs/Blog_pics/2560px-Rolex_logo.svg.png?width=334&name=2560px-Rolex_logo.svg.png" alt="company logo"></div>
-              <h3>Rolex</h3>
-              <p>15 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png"></div>
-              <h3>Google</h3>
-              <p>100 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://1000logos.net/wp-content/uploads/2017/05/PUMA-Logo-1978-1980.png" alt="company logo"></div>
-              <h3>Puma</h3>
-              <p>20 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-            <div class="company-card">
-              <div class="company-logo"><img src="https://miro.medium.com/v2/resize:fit:1400/1*XuUIFUdW4E2J0zj9E4mLkQ.png" alt="company logo"></div>
-              <h3>Calvin Klien</h3>
-              <p>30 Openings</p>
-              <button class="view-jobs">View Jobs</button>
-            </div>
-          </div>
-        </div>
-      </section>
       <section class="resume">
         <div class="container">
           <h2>Discover right job opportunities</h2>
@@ -116,6 +50,78 @@
           </section>
         </div>
       </section>
+      <section class="featured">
+        <div class="container">
+          <h2>Featured Companies Actively Hiring</h2>
+          <div class="company-grid">
+            <div class="company-card">
+            <div class="company-logo"><img src="https://www.prideindustries.com/wp-content/uploads/2021/06/Customer-logo_Amazon-1-1024x512.png.webp" alt="company logo"></div>
+            <h3>Amazon</h3>
+            <p>12 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://www.amazon.jobs','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://cdn.pixabay.com/photo/2021/11/11/12/41/facebook-6786210_1280.png" alt="company logo"></div>
+            <h3>Facebook</h3>
+            <p>50 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://www.facebookcareers.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png" alt="company logo"></div>
+            <h3>Apple</h3>
+            <p>80 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://jobs.apple.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/65c5da9f878952603e370d03_Myntra-Logo_1.svg/800px-65c5da9f878952603e370d03_Myntra-Logo_1.svg.png" alt="company logo"></div>
+            <h3>Myntra</h3>
+            <p>16 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://careers.myntra.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo-2003.png" alt="company logo"></div>
+            <h3>Lenovo</h3>
+            <p>179 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://www.lenovocareers.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://brandlogos.net/wp-content/uploads/2025/02/chanel-logo_brandlogos.net_r9vcm.png" alt="company logo"></div>
+            <h3>Chanel</h3>
+            <p>12 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://jobs.chanel.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://www.bluleadz.com/hs-fs/hubfs/Blog_pics/2560px-Rolex_logo.svg.png?width=334&name=2560px-Rolex_logo.svg.png" alt="company logo"></div>
+            <h3>Rolex</h3>
+            <p>15 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://www.rolex.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/800px-Google_2015_logo.svg.png"></div>
+            <h3>Google</h3>
+            <p>10 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://careers.google.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://1000logos.net/wp-content/uploads/2017/05/PUMA-Logo-1978-1980.png" alt="company logo"></div>
+            <h3>Puma</h3>
+            <p>20 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://about.puma.com','_blank')">View Jobs</button>
+          </div>
+          <div class="company-card">
+            <div class="company-logo"><img src="https://miro.medium.com/v2/resize:fit:1400/1*XuUIFUdW4E2J0zj9E4mLkQ.png" alt="company logo"></div>
+            <h3>Calvin Klien</h3>
+            <p>30 Openings</p>
+            <button class="view-jobs" onclick="window.open('https://www.pvh.com/brands/calvin-klein/careers','_blank')">View Jobs</button>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section class="employer-banner">
+        <h2>Are you hiring?</h2>
+        <p>Post your job and find the best talent.</p>
+        <a href="postjob.html" class="btn">Post a Job</a>
+      </section>      
     </main>
     <footer>
       <div class="fcontainer">
@@ -130,6 +136,7 @@
           <ul>
             <li><a href="helpcenter.html">Help center</a></li>
             <li><a href="reportissue.html">Report issue</a></li>
+            <li><div class ="social-icons"><i class="bi bi-linkedin"></i><i class="bi bi-instagram"></i><i class="bi bi-youtube"></i><i class="bi bi-facebook"></i><i class="bi bi-twitter"></i></div></li>
           </ul>
         </div>
         <div class="footer-col">
