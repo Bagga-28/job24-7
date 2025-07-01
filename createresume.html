@@ -3,18 +3,19 @@
 <head>
   <title>JOB24/7</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
   <header>
     <div class="hcontainer">
-      <div class="logo">JOB24/7</div>
+      <div class="logo"><span class="time-box">24/7</span></div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="jobs.html">Jobs</a></li>
           <li><a href="companies.html">Companies</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="resources.html">Resources</a></li>
+          <li><a href="skilltest.html">Skill test</a></li>
         </ul>
       </nav>
       <div class="auth">
@@ -23,12 +24,14 @@
       </div>
     </div>
   </header>
+  <main>
   <section class="resume-form">
-    <div class="container">
+    <div class="resumecontainer">
       <h2>Create Your Resume</h2>
       <p>No resume? No worries! Fill in your details below and click create.</p>
       <form action="submit_resume.php" method="post">
-        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="text" name="firstname" placeholder="First Name" required>
+        <input type="text" name="lastname" placeholder="Last Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="text" name="phone" placeholder="Phone Number" required>
         <input type="text" name="education" placeholder="Highest Qualification" required>
@@ -38,6 +41,7 @@
       </form>
     </div>
   </section>
+  </main>
   <footer>
     <div class="fcontainer">
       <div class="footer-col">
@@ -51,6 +55,7 @@
         <ul>
           <li><a href="helpcenter.html">Help center</a></li>
           <li><a href="reportissue.html">Report issue</a></li>
+          <li><div class ="social-icons"><i class="bi bi-linkedin"></i><i class="bi bi-instagram"></i><i class="bi bi-youtube"></i><i class="bi bi-facebook"></i><i class="bi bi-twitter"></i></div></li>
         </ul>
       </div>
       <div class="footer-col">
