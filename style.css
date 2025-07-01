@@ -45,13 +45,27 @@ header{
   margin: 0 auto;
   gap:15px;
 }
-.logo{
-  font-size:20px ;
-  font-weight:bold;
+.logo {
+  font-size: 20px;
+  font-weight: bold;
   letter-spacing: 0.5px;
-  background:linear-gradient(to right, #8e2de2, #4a00e0);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  display: flex;
+  align-items: center;
+
+}
+.logo::before {
+  content: "JOB";
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.logo .time-box {
+  padding: 1px 6px;
+  background-color: #4a00e0;
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
 }
 nav ul{
   list-style: none;
@@ -263,15 +277,26 @@ footer{
 .footer-col ul li a:hover {
   text-decoration: underline;
 }
-
 footer a{
   text-decoration:none;
   color:#d1d5db;
   transition:color 0.3s ease;
-  
 }
 footer a:hover{
   color:#fff;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.social-icons {
+  font-size: 24px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+.social-icons :hover {
+  color: #007bff;
 }
 .copyright{
   text-align:center;
@@ -289,13 +314,11 @@ footer a:hover{
   border-radius: var(--radius);
   box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
 }
-
 .issue-form label {
   display: block;
   margin-top: 15px;
   font-weight: bold;
 }
-
 .issue-form input,
 .issue-form select,
 .issue-form textarea {
@@ -306,7 +329,6 @@ footer a:hover{
   border-radius: var(--radius);
   box-sizing: border-box;
 }
-
 .issue-form button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -335,46 +357,39 @@ footer a:hover{
   color: #202124;
   line-height: 1.7;
 }
-
 .privacy-policy h1 {
   font-size: 32px;
   margin-bottom: 10px;
-  color: #1d3da6;
+  color: var(--primary-dark);
   border-bottom: 3px solid #e0e0e0;
   padding-bottom: 5px;
 }
-
 .privacy-policy h2 {
   font-size: 22px;
   margin-top: 30px;
-  color: #2e57e8;
+  color: var(--primary);
 }
-
 .privacy-policy p {
   margin-bottom: 15px;
   color: #444;
 }
-
 .privacy-policy ul {
   padding-left: 20px;
   margin-bottom: 15px;
 }
-
 .privacy-policy li {
   margin-bottom: 10px;
   color: #444;
 }
-
 .privacy-policy a {
-  color: #2e57e8;
+  color: var(--primary);
   text-decoration: none;
 }
-
 .privacy-policy a:hover {
   text-decoration: underline;
 }
 .resume-banner {
-  background: linear-gradient(90deg, #2e57e8, #4a00e0);
+  background: linear-gradient(90deg, var(--primary), #4a00e0);
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -382,80 +397,87 @@ footer a:hover{
   margin: 40px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
 .resume-banner h2 {
   font-size: 2rem;
   margin-bottom: 10px;
 }
-
 .resume-banner p {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
-
 .banner-btn {
   background: white;
   border-color:white;
-  color: #2e57e8;
+  color: var(--primary);
   padding: 12px 24px;
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
   transition: background 0.5s ease;
 }
-
 .banner-btn:hover {
   background: lightblue;
   border-color:lightblue;
 }
 /*              resume creation form starting here                    */
 .resume-form {
-  background: #f0f4ff;
-  padding: 50px 20px;
+  background-color: #f5f7fa;
+  padding: 5px 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.resumecontainer {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100vh;
+  max-width: 500px;
+}
+.resumecontainer h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 28px;
   text-align: center;
 }
-.resume-form .container {
-  max-width: 600px;
-  margin: 0 auto;
+.resumecontainer p {
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
 }
-.resume-form h2 {
-  color: var(--primary-dark);
+.resumecontainer form {
+  height: 270px;
+}
+.resumecontainer input[type="text"],
+.resumecontainer input[type="email"],
+.resumecontainer textarea {
+  padding: 2px 7px;
   margin-bottom: 15px;
-}
-.resume-form p {
-  margin-bottom: 25px;
-  color: var(--gray);
-}
-.resume-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.resume-form input,
-.resume-form textarea {
-  padding: 10px;
   border: 1px solid #ccc;
   border-radius: var(--radius);
-  width: 100%;
+  font-size: 14px;
+  resize: none;
 }
-.resume-form textarea {
-  min-height: 100px;
-  resize: vertical;
+.resumecontainer textarea {
+  min-height: 8px;
 }
-.resume-form button {
-  background: var(--primary);
+.resumecontainer button {
+  background-color: var(--primary);
   color: white;
-  padding: 10px;
+  font-size: 16px;
   border: none;
+  margin:50px;
   border-radius: var(--radius);
   cursor: pointer;
+  transition: background 0.3s ease;
 }
-.resume-form button:hover {
-  background: var(--primary-dark);
+.resumecontainer button:hover {
+  background-color: var(--primary-dark);
 }
 /*            resume creation form ending here                    */
 /*            help center page starting here                    */
-
 .help-center {
   max-width: 900px;
   margin: 50px auto;
@@ -510,7 +532,6 @@ footer a:hover{
   font-size: 1rem;
   resize: vertical;
 }
-
 .support-message .btn {
   margin-top: 10px;
   padding: 10px 20px;
@@ -521,7 +542,6 @@ footer a:hover{
   cursor: pointer;
   transition: background 0.3s;
 }
-
 .support-message .btn:hover {
   background-color: var(--primary-dark);
 }
@@ -560,14 +580,14 @@ footer a:hover{
 .modal-content form button {
   width: 100%;
   padding: 10px;
-  background-color: #2e57e8;
+  background-color: var(--primary);
   border: none;
   color: white;
   border-radius: 6px;
   cursor: pointer;
 }
 .modal-content form button:hover {
-  background-color: #1d3da6;
+  background-color: var(--primary-dark);
 }
 .close {
   position: absolute;
@@ -579,14 +599,16 @@ footer a:hover{
 /*            login signup ending here                      */
 /*            job page starting here                      */
 .jobbtn{
-  background-color: white;
+  background-color: rgb(244, 240, 240);
   color:black;
   border-radius:var(--radius);
-  padding:22px;
+  padding:22px 20px;
   text-align:center;
-  width:100px;
+  width:170px;
+  gap: 10px;
   display: flex;
   margin: 10px;
+  flex-shrink: 0;
 }
 .jobbtn:hover{
   color:var(--primary);
@@ -594,45 +616,50 @@ footer a:hover{
 .companies-section{
   padding:20px;
 }
-.companies-section h1{
+.featured-companies h2,
+.companies-section h2{
   text-align: center;
-  padding: 5px;
-  margin-bottom: 10px;
+  padding: 30px;
+  
+  margin-top: 30px;
+}
+.featured-companies{
+  padding:20px;
 }
 .company-types{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap:20px;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 }
 .topjob{
-  background-color: white;
+  background-color: rgb(244, 240, 240);
   color:black;
   border-radius:var(--radius);
   padding:22px;
-  width:100%;
+  width:300px;
   display: flex;
   flex-direction: column;
-
   margin: 10px;
 }
 .smalljob{
   background-color: var(--gray);
   border-radius:var(--radius);
-  display: flex;
   overflow: hidden;
   align-items: center;
   justify-content: center;
   height: 60px;
   width:60px;
   margin:2px;
-  flex-wrap: wrap;
 }
 .hori{
   display: flex;
   flex-direction: row;
 }
 .topjob-grid{
-  display:grid;
-  gap:60px;
+  display:flex;
+  flex-wrap: wrap;
+  gap:20px;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 }
 /*            job page ending here                      */
@@ -647,14 +674,14 @@ footer a:hover{
 }
 .credits-page h1 {
   text-align: center;
-  color: #2e57e8;
+  color: var(--primary);
   margin-bottom: 30px;
 }
 .credits-section {
   margin-bottom: 30px;
 }
 .credits-section h2 {
-  color: #1d3da6;
+  color: var(--primary-dark);
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
@@ -667,7 +694,7 @@ footer a:hover{
   color: #444;
 }
 .credits-section ul li a {
-  color: #2e57e8;
+  color: var(--primary);
   text-decoration: none;
 }
 .credits-section ul li a:hover {
@@ -685,11 +712,11 @@ footer a:hover{
 }
 .terms-page h1 {
   text-align: center;
-  color: #2e57e8;
+  color: var(--primary);
   margin-bottom: 30px;
 }
 .terms-page h2 {
-  color: #1d3da6;
+  color: var(--primary-dark);
   margin-top: 25px;
   margin-bottom: 10px;
   font-size: 1.2rem;
@@ -703,3 +730,270 @@ footer a:hover{
   padding-left: 20px;
 }
 /*            term and condition page ending here                */
+/*            fraud alert page starting here                */
+.fraud-alert {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.fraud-alert h1 {
+  text-align: center;
+  color: #d93025;
+  margin-bottom: 30px;
+}
+.fraud-alert h2 {
+  color:var(--primary-dark);
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.fraud-alert p, .fraud-alert ul {
+  color: #333;
+  line-height: 1.6;
+}
+.fraud-alert ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.fraud-alert a {
+  color:var(--primary);
+  text-decoration: underline;
+}
+/*            fraud alert page ending here                */
+/*            careers page starting here                */
+.career-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.career-section h1 {
+  text-align: center;
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+}
+.career-section p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+}
+.job-opening {
+  border-left: 5px solid var(--primary);
+  background-color: #f9fafb;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+}
+.job-opening h3 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+.job-opening p {
+  margin: 5px 0;
+  color: #555;
+}
+.apply-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.apply-btn:hover {
+  background-color:var(--primary-dark);
+}
+.culture {
+  text-align: center;
+  margin-top: 50px;
+}
+.culture h2 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+.culture p {
+  color: #555;
+  max-width: 800px;
+  margin: auto;
+}
+/*            careers page ending here                */
+/*            employer banner starting here                */
+.employer-banner {
+  background: #3F4F44;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 50px auto;
+  max-width: 900px;
+  transition: all 0.3s ease;
+}
+.employer-banner:hover {
+  transform: scale(1.02);
+}
+.employer-banner h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.employer-banner p {
+  font-size: 1.1rem;
+  color: whitesmoke;
+  margin-bottom: 25px;
+}
+.employer-banner .btn {
+  background-color: #A7C1A8;
+  color: black;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+.employer-banner .btn:hover {
+  background-color: green;
+}
+/*            employer banner ending here                */
+/*            post job page starting here                */
+.post-job-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+.post-job-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 700px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.post-job-form h2 {
+  text-align: center;
+  margin: 50px 165px 50px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  padding:5px;
+  border:3px black solid;
+}
+.post-job-form label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+.post-job-form input,
+.post-job-form textarea,
+.post-job-form select {
+  width: 300px;
+  max-height: 25px;
+  padding: 2px 25px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+.post-job-form input:focus,
+.post-job-form textarea:focus,
+.post-job-form select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.post-job-form .btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.post-job-form .btn:hover {
+  background-color: var(--primary-dark);
+}
+/*            post job page ending here                */
+/*            skill test page starting here                */
+.skill-main h1{
+  text-align: center;
+  font-weight: bold;
+  padding:10px;
+  margin-bottom: 20px;
+}
+#skilltestQuestionsContainer {
+  margin-top: 20px;
+}
+.question-block {
+  background-color: #eef6fb;
+  border-left: 5px solid #007BFF;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+.question-block p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.question-block label {
+  display: block;
+  margin-left: 10px;
+  font-weight: normal;
+  color: #333;
+}
+button[type="submit"] {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+#skilltestResult {
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #dff0d8;
+  border-left: 5px solid #3c763d;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+#skilltestResult h3 {
+  color: #2e7d32;
+}
+@media (max-width: 600px) {
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .question-block {
+    padding: 12px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+/*            skill test page ending here                */
